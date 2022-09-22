@@ -1,0 +1,54 @@
+Source: libreflectasm-java
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Pierre Gruet <pgt@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               default-jdk-headless,
+               javahelper (>= 0.43),
+               maven-debian-helper,
+               libmaven-assembly-plugin-java,
+               libmaven-bundle-plugin-java,
+               libmaven-javadoc-plugin-java,
+               libasm-java,
+               libasm-java-doc,
+               junit4 <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Git: https://salsa.debian.org/java-team/libreflectasm-java.git
+Vcs-Browser: https://salsa.debian.org/java-team/libreflectasm-java
+Homepage: https://github.com/EsotericSoftware/reflectasm
+Rules-Requires-Root: no
+
+Package: libreflectasm-java
+Architecture: all
+Depends: ${java:Depends},
+         ${maven:Depends},
+         ${misc:Depends}
+Recommends: libreflectasm-java-doc (= ${binary:Version}),
+            ${maven:OptionalDepends}
+Description: library that provides reflection by using code generation
+ ReflectASM is a very small Java library that provides high performance
+ reflection by using code generation. An access class is generated
+ to set/get fields, call methods, or create a new instance.
+ .
+ The access class uses bytecode rather than Java's reflection,
+ so it is much faster. It can also access primitive fields via
+ bytecode to avoid boxing.
+
+Package: libreflectasm-java-doc
+Architecture: all
+Section: doc
+Depends: ${java:Depends},
+         ${misc:Depends}
+Recommends: ${java:Recommends}
+Multi-Arch: foreign
+Description: library that provides reflection by using code generation - doc
+ ReflectASM is a very small Java library that provides high performance
+ reflection by using code generation. An access class is generated
+ to set/get fields, call methods, or create a new instance.
+ .
+ The access class uses bytecode rather than Java's reflection,
+ so it is much faster. It can also access primitive fields via
+ bytecode to avoid boxing.
+ .
+ This package contains the Javadoc API

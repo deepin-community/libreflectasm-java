@@ -1,0 +1,67 @@
+libreflectasm-java (1.11.6+dfsg-1) unstable; urgency=medium
+
+  * Bumping Standards version to 4.6.0 (no change)
+  * Marking the doc package as Multi-Arch: foreign.
+
+ -- Pierre Gruet <pgt@debian.org>  Tue, 24 Aug 2021 21:33:37 +0200
+
+libreflectasm-java (1.11.6+dfsg-1~exp0) experimental; urgency=medium
+
+  * New upstream version 1.11.6+dfsg
+  * Switching to version 4 for watch file
+  * Depending on debhelper-compat 13
+  * Bumping Standards version to 4.5.1:
+    - removing get-orig-source rule in d/rules
+    - setting Rules-Requires-Root: no
+    - using the https specification form in d/copyright
+  * Setting myself as uploader, thanks to Damien Raude-Morvan!
+  * Building with maven
+  * Providing the javadoc for the existing -doc package
+  * Building a jar without the classes of the dependencies
+  * Adding a lintian override for the embedded JS files
+  * Generate 1_6 classes instead of 1_1 to stick to asm evolution
+  * Ignoring last assertion of testAutoUnloadClassloaders
+  * Adding d/u/metadata fields about Bugs and Repository.
+
+ -- Pierre Gruet <pgt@debian.org>  Tue, 18 May 2021 14:26:24 +0200
+
+libreflectasm-java (1.05-4.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Mon, 28 Dec 2020 12:14:51 +0100
+
+libreflectasm-java (1.05-4) unstable; urgency=medium
+
+  * Team upload.
+  * Depend on libasm-java (>= 5.0) instead of libasm4-java
+  * Standards-Version updated to 3.9.8
+  * Use secure Vcs-* URLs
+  * debian/watch: Track the release tags on GitHub
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 27 Sep 2016 12:24:52 +0200
+
+libreflectasm-java (1.05-3) unstable; urgency=medium
+
+  * Team upload.
+  * Install the Maven artifacts in /usr/share/maven-repo
+  * debian/control:
+    - Maintenance assigned to the Debian Java Maintainers
+    - Standards-Version updated to 3.9.6 (no changes)
+    - Updated the Homepage field
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 09 Jun 2015 09:36:19 +0200
+
+libreflectasm-java (1.05-2) unstable; urgency=low
+
+  * Upload to unstable
+  * d/control: Use canonical URL for Vcs-* fields.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Tue, 07 May 2013 20:37:14 +0200
+
+libreflectasm-java (1.05-1) experimental; urgency=low
+
+  * Initial release. (Closes: #700264)
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Sat, 09 Feb 2013 14:00:11 +0100

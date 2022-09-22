@@ -1,0 +1,19 @@
+Description: providing the javadoc from pom.xml, as a -doc package exists
+Author: Pierre Gruet <pgt@debian.org>
+Forwarded: not-needed
+Last-Update: 2021-05-17
+
+--- a/pom.xml
++++ b/pom.xml
+@@ -128,6 +128,11 @@
+ 					</instructions>
+ 				</configuration>
+ 			</plugin>
++                        <plugin>
++                                        <groupId>org.apache.maven.plugins</groupId>
++                                        <artifactId>maven-javadoc-plugin</artifactId>
++                                        <version>3.0.1</version>
++                        </plugin>
+ 		</plugins>
+ 	</build>
+ </project>

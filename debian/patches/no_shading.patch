@@ -1,0 +1,37 @@
+Description: avoid building a shaded jar with copies of dependencies' classes
+Author: Pierre Gruet <pgt@debian.org>
+Forwarded not-needed
+Last-Update: 2021-05-17
+
+--- a/pom.xml
++++ b/pom.xml
+@@ -93,7 +93,7 @@
+ 					</excludes>
+ 				</configuration>
+ 			</plugin>
+-			<plugin>
++			<!--<plugin>
+ 				<groupId>org.apache.maven.plugins</groupId>
+ 				<artifactId>maven-shade-plugin</artifactId>
+ 				<version>2.3</version>
+@@ -103,9 +103,9 @@
+ 						<goals>
+ 							<goal>shade</goal>
+ 						</goals>
+-						<configuration>
++						<configuration>-->
+ 							<!-- remove all classes of dependencies that are not used by the project -->
+-							<minimizeJar>true</minimizeJar>
++							<!--<minimizeJar>true</minimizeJar>
+ 							<shadedArtifactAttached>false</shadedArtifactAttached>
+ 							<relocations>
+ 								<relocation>
+@@ -116,7 +116,7 @@
+ 						</configuration>
+ 					</execution>
+ 				</executions>
+-			</plugin>
++			</plugin>-->
+ 			<plugin>
+ 				<groupId>org.apache.felix</groupId>
+ 				<artifactId>maven-bundle-plugin</artifactId>

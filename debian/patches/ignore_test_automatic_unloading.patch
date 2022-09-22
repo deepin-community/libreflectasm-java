@@ -1,0 +1,16 @@
+Description: ignore the assertion relying on garbage collector behaviour
+Author: Pierre Gruet <pgt@debian.org>
+Forwarded: https://github.com/EsotericSoftware/reflectasm/issues/82
+Last-Update: 2021-05-18
+
+--- a/test/com/esotericsoftware/reflectasm/ClassLoaderTest.java
++++ b/test/com/esotericsoftware/reflectasm/ClassLoaderTest.java
+@@ -86,7 +86,7 @@
+ 		}
+ 
+ 		// Yeah, both reclaimed!
+-		assertEquals(Math.min(initialCount, 1), AccessClassLoader.activeAccessClassLoaders());
++		//assertEquals(Math.min(initialCount, 1), AccessClassLoader.activeAccessClassLoaders());
+ 	}
+ 
+ 	public void testRemoveClassloaders () throws Exception {
