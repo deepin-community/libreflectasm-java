@@ -1,3 +1,35 @@
+libreflectasm-java (1.11.9+dfsg-4) unstable; urgency=medium
+
+  * Deactivating flaky assertion in ClassLoaderTest (Closes: #1031480)
+  * Raising Standards version to 4.6.2 (no change)
+  * Removing unneeded versioned B-D on javahelper
+
+ -- Pierre Gruet <pgt@debian.org>  Fri, 17 Feb 2023 21:51:44 +0100
+
+libreflectasm-java (1.11.9+dfsg-3) unstable; urgency=medium
+
+  * Stopping build-depending on dropped libasm-java-doc (Closes: #1025838)
+
+ -- Pierre Gruet <pgt@debian.org>  Sat, 10 Dec 2022 14:18:59 +0100
+
+libreflectasm-java (1.11.9+dfsg-2) unstable; urgency=medium
+
+  * Updating ConstructorAccessTest to fit the changes in class loading
+    brought by OpenJDK17 (Closes: #1012106)
+
+ -- Pierre Gruet <pgt@debian.org>  Fri, 11 Nov 2022 07:44:35 +0100
+
+libreflectasm-java (1.11.9+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 1.11.9+dfsg
+  * Refreshing patches
+  * Raising Standards version to 4.6.1 (no change)
+  * Updating d/watch after a change in the Github layout
+  * Adding a Lintian override for the bad-jar-name warning
+  * Refreshing the Lintian override for the embedded Javascript
+
+ -- Pierre Gruet <pgt@debian.org>  Thu, 22 Sep 2022 16:23:33 +0200
+
 libreflectasm-java (1.11.6+dfsg-1) unstable; urgency=medium
 
   * Bumping Standards version to 4.6.0 (no change)

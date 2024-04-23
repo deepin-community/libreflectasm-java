@@ -7,7 +7,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.esotericsoftware</groupId>
 	<artifactId>reflectasm</artifactId>
-	<version>1.11.6</version>
+	<version>1.11.9</version>
 	<packaging>bundle</packaging>
 	<name>ReflectASM</name>
 	<description>High performance Java reflection using code generation</description>
@@ -88,9 +88,11 @@
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
-					<excludes>
-						<exclude>**/.svn/*</exclude>
-					</excludes>
+					<archive>
+						<manifestEntries>
+							<Automatic-Module-Name>com.esotericsoftware.reflectasm</Automatic-Module-Name>
+						</manifestEntries>
+					</archive>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -125,6 +127,7 @@
 				<configuration>
 					<instructions>
 						<Export-Package>com.esotericsoftware.reflectasm*</Export-Package>
+						<Import-Package>!org.objectweb.asm.*</Import-Package>
 					</instructions>
 				</configuration>
 			</plugin>
