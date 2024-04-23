@@ -5,15 +5,14 @@ Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.or
 Uploaders: Pierre Gruet <pgt@debian.org>
 Build-Depends: debhelper-compat (= 13),
                default-jdk-headless,
-               javahelper (>= 0.43),
+               javahelper,
                maven-debian-helper,
                libmaven-assembly-plugin-java,
                libmaven-bundle-plugin-java,
                libmaven-javadoc-plugin-java,
                libasm-java,
-               libasm-java-doc,
                junit4 <!nocheck>
-Standards-Version: 4.6.0
+Standards-Version: 4.6.2
 Vcs-Git: https://salsa.debian.org/java-team/libreflectasm-java.git
 Vcs-Browser: https://salsa.debian.org/java-team/libreflectasm-java
 Homepage: https://github.com/EsotericSoftware/reflectasm

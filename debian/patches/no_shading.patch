@@ -5,8 +5,8 @@ Last-Update: 2021-05-17
 
 --- a/pom.xml
 +++ b/pom.xml
-@@ -93,7 +93,7 @@
- 					</excludes>
+@@ -95,7 +95,7 @@
+ 					</archive>
  				</configuration>
  			</plugin>
 -			<plugin>
@@ -14,7 +14,7 @@ Last-Update: 2021-05-17
  				<groupId>org.apache.maven.plugins</groupId>
  				<artifactId>maven-shade-plugin</artifactId>
  				<version>2.3</version>
-@@ -103,9 +103,9 @@
+@@ -105,9 +105,9 @@
  						<goals>
  							<goal>shade</goal>
  						</goals>
@@ -26,7 +26,7 @@ Last-Update: 2021-05-17
  							<shadedArtifactAttached>false</shadedArtifactAttached>
  							<relocations>
  								<relocation>
-@@ -116,7 +116,7 @@
+@@ -118,7 +118,7 @@
  						</configuration>
  					</execution>
  				</executions>

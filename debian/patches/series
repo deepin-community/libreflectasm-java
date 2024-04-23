@@ -1,4 +1,6 @@
 javadoc.patch
 no_shading.patch
 generate_1_6_classes.patch
-ignore_test_automatic_unloading.patch
+#ignore_test_automatic_unloading.patch
+switching_to_OpenJDK17.patch
+disable_flaky_assertion.patch
